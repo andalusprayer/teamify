@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#27ae60" />
+  <text x="100" y="100" font-family="Arial" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle">欧几里得数学竞赛</text>
+  <text x="100" y="130" font-family="Arial" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">Euclid Math</text>
+  <g transform="translate(100, 60)">
+    <polygon points="0,-20 17,10 -17,10" stroke="white" stroke-width="2" fill="none" />
+    <circle cx="0" cy="0" r="25" stroke="white" stroke-width="2" fill="none" />
+  </g>
+</svg>

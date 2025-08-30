@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <!-- 背景 -->
+  <rect width="300" height="200" fill="#f5f5f5" rx="10" ry="10"/>
+  
+  <!-- 图标 -->
+  <g transform="translate(150, 80)">
+    <!-- 商业图标 -->
+    <circle cx="0" cy="0" r="40" fill="#1565c0"/>
+    <g fill="white" transform="translate(-20, -20) scale(0.08)">
+      <!-- 商业图标：图表和公文包 -->
+      <path d="M500 100L650 250L500 400L350 250L500 100Z"/>
+      <path d="M250 400H750V700H250V400Z"/>
+      <path d="M350 400V300H650V400"/>
+      <path d="M450 500H550V600H450V500Z"/>
+    </g>
+  </g>
+  
+  <!-- 文字 -->
+  <g text-anchor="middle">
+    <!-- 中文名称 -->
+    <text x="150" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">沃顿商赛</text>
+    <!-- 英文名称 -->
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="10" fill="#666">Wharton Global High School Investment Competition</text>
+  </g>
+</svg>

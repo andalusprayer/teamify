@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习资料 | Study Materials - teamify</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1E90FF 0%, #00CED1 50%, #20B2AA 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path d="M0,400 Q150,350 300,400 T600,400 T900,400 T1200,400 L1200,800 L0,800 Z" fill="%2300CED1" opacity="0.6"/><path d="M0,500 Q200,450 400,500 T800,500 T1200,500 L1200,800 L0,800 Z" fill="%2300BFFF" opacity="0.5"/><circle cx="100" cy="150" r="30" fill="%23FFD700" opacity="0.7"/></svg>') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .search-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .material-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .material-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .material-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .material-icon {
+            font-size: 2.5rem;
+            color: #87CEEB;
+        }
+
+        .material-info h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin: 0 0 5px 0;
+        }
+
+        .material-info .category {
+            color: #87CEEB;
+            font-size: 0.9rem;
+        }
+
+        .material-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .material-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+            color: white;
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .back-btn {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .search-container { flex-direction: column; }
+            .search-input { min-width: auto; width: 100%; }
+            .materials-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>学习资料</h1>
+            <p>浏览和下载国际竞赛学习资料，助力你的竞赛之路</p>
+        </section>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索资料名称、关键词或竞赛类型...">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+
+        <div class="materials-grid">
+            <div class="material-card">
+                <div class="material-header">
+                    <div class="material-icon">📚</div>
+                    <div class="material-info">
+                        <h3>AMC 10历年真题集</h3>
+                        <div class="category">AMC数学竞赛</div>
+                    </div>
+                </div>
+                <p class="material-description">包含2015-2024年AMC 10竞赛真题及答案详解，帮助了解题型和难度变化。</p>
+                <div class="material-actions">
+                    <a href="#" class="btn btn-primary">下载资料</a>
+                    <a href="#" class="btn btn-outline">预览</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <div class="material-header">
+                    <div class="material-icon">🎥</div>
+                    <div class="material-info">
+                        <h3>物理碗竞赛解题技巧</h3>
+                        <div class="category">物理碗竞赛</div>
+                    </div>
+                </div>
+                <p class="material-description">系统讲解物理碗竞赛的解题思路和技巧，包含力学、电磁学等重点章节。</p>
+                <div class="material-actions">
+                    <a href="#" class="btn btn-primary">观看视频</a>
+                    <a href="#" class="btn btn-outline">课程大纲</a>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <div class="material-header">
+                    <div class="material-icon">💻</div>
+                    <div class="material-info">
+                        <h3>USACO算法基础教程</h3>
+                        <div class="category">USACO编程竞赛</div>
+                    </div>
+                </div>
+                <p class="material-description">从零开始学习USACO竞赛所需的算法知识，包含基础数据结构、动态规划等。</p>
+                <div class="material-actions">
+                    <a href="#" class="btn btn-primary">下载资料</a>
+                    <a href="#" class="btn btn-outline">在线阅读</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="competitions.html" class="back-btn">← 返回竞赛信息</a>
+        </div>
+    </div>
+</body>
+</html>

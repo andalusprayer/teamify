@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#e67e22" />
+  <text x="100" y="100" font-family="Arial" font-size="22" fill="white" text-anchor="middle" dominant-baseline="middle">化学奥林匹克</text>
+  <text x="100" y="130" font-family="Arial" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">Chemistry Olympiad</text>
+  <g transform="translate(100, 60)">
+    <circle cx="-10" cy="-5" r="5" fill="white" />
+    <circle cx="10" cy="-5" r="5" fill="white" />
+    <circle cx="0" cy="10" r="5" fill="white" />
+    <path d="M-10,-5 L10,-5 L0,10 Z" stroke="white" stroke-width="1" fill="none" />
+  </g>
+</svg>

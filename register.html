@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 国际生队友匹配平台 | Register - teamify</title>
+    <meta name="description" content="为参加国际竞赛的高中生提供专业注册服务，包括AMC、物理碗、USACO等竞赛的队友匹配。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">TeamMatch<span>Global</span></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" id="hideMenu"></i>
+                    <ul>
+                        <li><a href="index.html">首页 Home</a></li>
+                        <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                        <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                        <li><a href="profile.html">个人资料 Profile</a></li>
+                        <li><a href="about.html">团队介绍 About Us</a></li>
+                    </ul>
+                </div>
+                <div class="language-switch">
+                    <button id="langToggle">EN | 中文</button>
+                </div>
+                <div class="auth-buttons" id="authButtons">
+                    <a href="login.html" class="btn btn-outline">登录 Login</a>
+                </div>
+                <i class="fas fa-bars" id="showMenu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="register-page">
+        <div class="container">
+            <div class="register-header">
+                <h1>加入全球竞赛社区</h1>
+                <h1 class="en">Join the Global Competition Community</h1>
+                <p>为参加国际竞赛的高中生提供专业的队友匹配服务</p>
+                <p class="en">Professional teammate matching service for high school students participating in international competitions</p>
+            </div>
+
+            <div class="register-container">
+                <div class="register-tabs">
+                    <button class="tab-btn active" data-tab="basic-info">
+                        <i class="fas fa-user"></i>
+                        <span>基本信息</span>
+                        <span class="en">Basic Info</span>
+                    </button>
+                    <button class="tab-btn" data-tab="academic-background">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>学术背景</span>
+                        <span class="en">Academic</span>
+                    </button>
+                    <button class="tab-btn" data-tab="competition-interests">
+                        <i class="fas fa-trophy"></i>
+                        <span>竞赛兴趣</span>
+                        <span class="en">Competitions</span>
+                    </button>
+                    <button class="tab-btn" data-tab="team-preferences">
+                        <i class="fas fa-users"></i>
+                        <span>团队偏好</span>
+                        <span class="en">Team Preferences</span>
+                    </button>
+                </div>
+
+                <form id="registerForm" class="register-form">
+                    <!-- 基本信息 -->
+                    <div class="tab-content active" id="basic-info">
+                        <h2>基本信息 Basic Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">姓名 First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">姓氏 Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱 Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">手机号码 Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthDate">出生日期 Birth Date *</label>
+                                <input type="date" id="birthDate" name="birthDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="grade">年级 Grade *</label>
+                                <select id="grade" name="grade" required>
+                                    <option value="">请选择年级</option>
+                                    <option value="9">九年级 Grade 9</option>
+                                    <option value="10">十年级 Grade 10</option>
+                                    <option value="11">十一年级 Grade 11</option>
+                                    <option value="12">十二年级 Grade 12</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="school">学校名称 School Name *</label>
+                                <input type="text" id="school" name="school" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">国家/地区 Country/Region *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">请选择国家</option>
+                                    <option value="CN">中国 China</option>
+                                    <option value="US">美国 United States</option>
+                                    <option value="CA">加拿大 Canada</option>
+                                    <option value="UK">英国 United Kingdom</option>
+                                    <option value="AU">澳大利亚 Australia</option>
+                                    <option value="SG">新加坡 Singapore</option>
+                                    <option value="JP">日本 Japan</option>
+                                    <option value="KR">韩国 South Korea</option>
+                                    <option value="IN">印度 India</option>
+                                    <option value="other">其他 Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">城市 City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="password">密码 Password *</label>
+                                <input type="password" id="password" name="password" required>
+                                <small>密码至少8位，包含字母和数字</small>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="confirmPassword">确认密码 Confirm Password *</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 学术背景 -->
+                    <div class="tab-content" id="academic-background">
+                        <h2>学术背景 Academic Background</h2>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="gpa">GPA成绩 GPA Score</label>
+                                <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.1" placeholder="例如: 3.8">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>数学能力 Math Skills *</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="mathLevel" value="beginner" required>
+                                        <span>初学者 Beginner</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="mathLevel" value="intermediate" required>
+                                        <span>中等 Intermediate</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="mathLevel" value="advanced" required>
+                                        <span>高级 Advanced</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="mathLevel" value="expert" required>
+                                        <span>专家级 Expert</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>物理能力 Physics Skills</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="physicsLevel" value="beginner">
+                                        <span>初学者 Beginner</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="physicsLevel" value="intermediate">
+                                        <span>中等 Intermediate</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="physicsLevel" value="advanced">
+                                        <span>高级 Advanced</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="physicsLevel" value="expert">
+                                        <span>专家级 Expert</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>编程能力 Programming Skills</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="programmingLevel" value="beginner">
+                                        <span>初学者 Beginner</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="programmingLevel" value="intermediate">
+                                        <span>中等 Intermediate</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="programmingLevel" value="advanced">
+                                        <span>高级 Advanced</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="programmingLevel" value="expert">
+                                        <span>专家级 Expert</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="languages">掌握的语言 Languages Known *</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="chinese">
+                                        <span>中文 Chinese</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="english">
+                                        <span>英语 English</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="spanish">
+                                        <span>西班牙语 Spanish</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="french">
+                                        <span>法语 French</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="german">
+                                        <span>德语 German</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="japanese">
+                                        <span>日语 Japanese</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="languages" value="korean">
+                                        <span>韩语 Korean</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="achievements">学术成就 Academic Achievements</label>
+                                <textarea id="achievements" name="achievements" rows="4" placeholder="请描述你的学术成就，如获奖经历、研究项目等..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 竞赛兴趣 -->
+                    <div class="tab-content" id="competition-interests">
+                        <h2>竞赛兴趣 Competition Interests</h2>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>感兴趣的竞赛类型 Interested Competition Types *</label>
+                                <div class="checkbox-group competition-types">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="amc">
+                                        <span>AMC数学竞赛 AMC Math</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="physics-bowl">
+                                        <span>物理碗竞赛 Physics Bowl</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="usaco">
+                                        <span>USACO编程竞赛 USACO</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="science-olympiad">
+                                        <span>科学奥林匹克 Science Olympiad</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="chemistry-olympiad">
+                                        <span>化学奥林匹克 Chemistry Olympiad</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="biology-olympiad">
+                                        <span>生物奥林匹克 Biology Olympiad</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="debate">
+                                        <span>国际辩论赛 International Debate</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="competitionTypes" value="model-un">
+                                        <span>模拟联合国 Model UN</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>竞赛经验 Competition Experience</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="competitionExperience" value="none">
+                                        <span>无经验 No Experience</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="competitionExperience" value="beginner">
+                                        <span>初学者 Beginner (1-2次)</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="competitionExperience" value="intermediate">
+                                        <span>中等 Intermediate (3-5次)</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="competitionExperience" value="experienced">
+                                        <span>有经验 Experienced (5次以上)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="competitionHistory">竞赛历史 Competition History</label>
+                                <textarea id="competitionHistory" name="competitionHistory" rows="4" placeholder="请描述你参加过的竞赛经历，包括竞赛名称、成绩、获奖情况等..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="targetCompetitions">目标竞赛 Target Competitions</label>
+                                <textarea id="targetCompetitions" name="targetCompetitions" rows="3" placeholder="请列出你计划参加的未来竞赛..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>期望的竞赛成绩 Expected Performance</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="expectedPerformance" value="participation">
+                                        <span>参与为主 Participation</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="expectedPerformance" value="honorable">
+                                        <span>荣誉奖 Honorable Mention</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="expectedPerformance" value="bronze">
+                                        <span>铜奖 Bronze Medal</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="expectedPerformance" value="silver">
+                                        <span>银奖 Silver Medal</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="expectedPerformance" value="gold">
+                                        <span>金奖 Gold Medal</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 团队偏好 -->
+                    <div class="tab-content" id="team-preferences">
+                        <h2>团队偏好 Team Preferences</h2>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>团队规模偏好 Preferred Team Size</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="teamSize" value="2-3">
+                                        <span>2-3人 Small Team</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="teamSize" value="4-5">
+                                        <span>4-5人 Medium Team</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="teamSize" value="6+">
+                                        <span>6人以上 Large Team</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>团队角色偏好 Preferred Team Role</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="teamRoles" value="leader">
+                                        <span>团队领导 Team Leader</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="teamRoles" value="specialist">
+                                        <span>专业领域专家 Specialist</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="teamRoles" value="coordinator">
+                                        <span>协调者 Coordinator</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="teamRoles" value="supporter">
+                                        <span>支持者 Supporter</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="teamRoles" value="flexible">
+                                        <span>灵活角色 Flexible Role</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>国际团队偏好 International Team Preference</label>
+                                <div class="skill-levels">
+                                    <label class="skill-option">
+                                        <input type="radio" name="internationalPreference" value="same-country">
+                                        <span>同国家 Same Country</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="internationalPreference" value="mixed">
+                                        <span>混合团队 Mixed Team</span>
+                                    </label>
+                                    <label class="skill-option">
+                                        <input type="radio" name="internationalPreference" value="no-preference">
+                                        <span>无偏好 No Preference</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="teamGoals">团队目标 Team Goals</label>
+                                <textarea id="teamGoals" name="teamGoals" rows="3" placeholder="请描述你希望通过团队合作达成的目标..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="availability">可用时间 Availability</label>
+                                <textarea id="availability" name="availability" rows="3" placeholder="请描述你的可用时间，如每周几小时、是否可以在线协作等..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="additionalInfo">其他信息 Additional Information</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="请提供任何其他相关信息，如特殊技能、兴趣爱好、联系方式偏好等..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i> 上一步 Previous
+                        </button>
+                        <button type="button" class="btn btn-primary" id="nextBtn">
+                            下一步 Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
+                            <i class="fas fa-check"></i> 完成注册 Complete Registration
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>TeamMatch<span>Global</span></h3>
+                    <p>连接全球高中生，共赢国际竞赛</p>
+                    <p class="en">Connecting Global High School Students, Winning International Competitions Together</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>快速链接 Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">首页 Home</a></li>
+                            <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                            <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                            <li><a href="profile.html">个人资料 Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>热门竞赛 Popular Competitions</h4>
+                        <ul>
+                            <li><a href="competitions.html#amc">AMC数学竞赛 AMC Math</a></li>
+                            <li><a href="competitions.html#physics-bowl">物理碗竞赛 Physics Bowl</a></li>
+                            <li><a href="competitions.html#usaco">USACO编程竞赛 USACO</a></li>
+                            <li><a href="competitions.html#debate">国际辩论赛 Debate Tournament</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 teamify. All Rights Reserved. | 国际高中生队友匹配平台 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

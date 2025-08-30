@@ -1,0 +1,33 @@
+# 测试文件 Test files
+test-*.html
+debug-*.html
+simple-*.html
+final-*.html
+
+# 系统文件 System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器文件 Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件 Log files
+*.log
+
+# 临时文件 Temporary files
+*.tmp
+*.temp
+
+# 依赖文件 Dependencies (如果有的话)
+node_modules/
+package-lock.json
+yarn.lock
+
+# 构建文件 Build files
+dist/
+build/

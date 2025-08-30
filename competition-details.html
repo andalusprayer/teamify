@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC竞赛详情 | Competition Details - teamify</title>
+    <meta name="description" content="了解AMC数学竞赛的详细信息，包括比赛规则、报名要求和奖项设置">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1E90FF 0%, #00CED1 50%, #20B2AA 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path d="M0,400 Q150,350 300,400 T600,400 T900,400 T1200,400 L1200,800 L0,800 Z" fill="%2300CED1" opacity="0.6"/><path d="M0,500 Q200,450 400,500 T800,500 T1200,500 L1200,800 L0,800 Z" fill="%2300BFFF" opacity="0.5"/><circle cx="100" cy="150" r="30" fill="%23FFD700" opacity="0.7"/><circle cx="250" cy="100" r="20" fill="%23FFD700" opacity="0.5"/></svg>') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .detail-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .detail-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-section h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .detail-section h3 {
+            color: #87CEEB;
+            font-size: 1.3rem;
+            margin: 20px 0 15px 0;
+        }
+
+        .detail-section p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .detail-section ul {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .detail-section li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: #87CEEB;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 206, 209, 0.3);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .back-btn {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .detail-section { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>AMC数学竞赛</h1>
+            <p class="subtitle">American Mathematics Competitions</p>
+            <div class="badge">🏆 国际顶级数学竞赛</div>
+        </section>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="detail-section">
+                    <h2>📚 竞赛介绍</h2>
+                    <p>AMC（American Mathematics Competitions）是美国数学协会举办的系列数学竞赛，旨在激发学生对数学的兴趣，培养数学思维能力。AMC竞赛分为AMC 8、AMC 10和AMC 12三个级别，面向不同年龄段的学生。</p>
+                    
+                    <h3>竞赛特色</h3>
+                    <ul>
+                        <li>题目设计巧妙，注重数学思维和解题技巧</li>
+                        <li>全球认可度高，是申请美国名校的重要加分项</li>
+                        <li>分为多个级别，适合不同水平的学生参与</li>
+                        <li>获奖证书具有国际认可度</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>📅 比赛安排</h2>
+                    <h3>AMC 8（8年级及以下）</h3>
+                    <ul>
+                        <li>比赛时间：每年1月</li>
+                        <li>题目数量：25道选择题</li>
+                        <li>考试时长：40分钟</li>
+                        <li>难度：基础到中等</li>
+                    </ul>
+                    
+                    <h3>AMC 10（10年级及以下）</h3>
+                    <ul>
+                        <li>比赛时间：每年2月</li>
+                        <li>题目数量：25道选择题</li>
+                        <li>考试时长：75分钟</li>
+                        <li>难度：中等</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2>🏅 奖项设置</h2>
+                    <h3>个人奖项</h3>
+                    <ul>
+                        <li><strong>满分奖：</strong>25分（AMC 8）或25分（AMC 10/12）</li>
+                        <li><strong>杰出奖：</strong>前1%的参赛者</li>
+                        <li><strong>优秀奖：</strong>前5%的参赛者</li>
+                        <li><strong>荣誉奖：</strong>前15%的参赛者</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>📊 竞赛信息</h3>
+                    <div class="info-item">
+                        <span class="info-label">竞赛级别</span>
+                        <span class="info-value">AMC 8/10/12</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">主办方</span>
+                        <span class="info-value">美国数学协会</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">比赛时间</span>
+                        <span class="info-value">1-2月</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">考试时长</span>
+                        <span class="info-value">40-75分钟</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🎯 快速行动</h3>
+                    <div class="action-buttons">
+                        <a href="find-teammates.html" class="btn btn-primary">寻找队友</a>
+                        <a href="register.html" class="btn btn-outline">立即报名</a>
+                        <a href="contact.html" class="btn btn-outline">咨询详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="competitions.html" class="back-btn">← 返回竞赛列表</a>
+        </div>
+    </div>
+</body>
+</html>

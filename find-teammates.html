@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻找队友 | Find Teammates - teamify</title>
+    <meta name="description" content="在teamify平台上寻找理想的竞赛队友，基于技能、经验和兴趣的智能匹配">
+    <meta name="keywords" content="寻找队友,Find teammates,竞赛队友,Competition teammates,国际竞赛,International competitions,高中生组队,High school team formation">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/find-teammates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">teamify</a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" id="hideMenu"></i>
+                    <ul>
+                        <li><a href="index.html">首页 Home</a></li>
+                        <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                        <li><a href="find-teammates.html" class="active">寻找队友 Find Teammates</a></li>
+                        <li><a href="login.html">个人资料 Profile</a></li>
+                        <li><a href="about.html">团队介绍 About Us</a></li>
+                    </ul>
+                </div>
+                <div class="language-switch">
+                    <button id="langToggle">EN | 中文 | 粵語</button>
+                </div>
+                <div class="auth-buttons" id="authButtons">
+                    <!-- 动态加载认证按钮 -->
+                </div>
+                <i class="fas fa-bars" id="showMenu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="find-teammates-container">
+        <div class="container">
+            <!-- 英雄区域 Hero Section -->
+            <section class="hero-section">
+                <h1>寻找理想队友</h1>
+                <p>基于技能、经验和兴趣的智能匹配，找到最适合的竞赛合作伙伴</p>
+            </section>
+
+            <!-- 搜索区域 Search Section -->
+            <section class="search-section">
+                <h2>智能搜索筛选</h2>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="competitionType">竞赛类型</label>
+                        <select id="competitionType">
+                            <option value="">选择竞赛类型</option>
+                            <option value="AMC">AMC数学竞赛</option>
+                            <option value="Physics Bowl">物理碗竞赛</option>
+                            <option value="USACO">USACO编程竞赛</option>
+                            <option value="Science Olympiad">科学奥林匹克</option>
+                            <option value="Debate">国际辩论赛</option>
+                            <option value="Chemistry Olympiad">化学奥林匹克</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="country">国家/地区</label>
+                        <select id="country">
+                            <option value="">选择国家/地区</option>
+                            <option value="China">中国</option>
+                            <option value="USA">美国</option>
+                            <option value="UK">英国</option>
+                            <option value="Canada">加拿大</option>
+                            <option value="Australia">澳大利亚</option>
+                            <option value="Singapore">新加坡</option>
+                            <option value="Japan">日本</option>
+                            <option value="South Korea">韩国</option>
+                            <option value="Germany">德国</option>
+                            <option value="France">法国</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="skills">技能关键词</label>
+                        <input type="text" id="skills" placeholder="输入技能关键词，用逗号分隔">
+                    </div>
+                </div>
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                    搜索队友
+                </button>
+            </section>
+
+            <!-- 视图选项 View Options -->
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th-large"></i> 网格视图
+                </button>
+                <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i> 列表视图
+                </button>
+            </div>
+
+            <!-- 队友列表 Teammates List -->
+            <section class="teammates-list">
+                <div id="teammatesGrid" class="teammates-grid">
+                    <!-- 示例队友卡片 -->
+                    <div class="teammate-card">
+                        <div class="teammate-header">
+                            <div class="teammate-avatar">L</div>
+                            <div class="teammate-info">
+                                <h3>李明</h3>
+                                <p>中国 · 北京四中</p>
+                                <p>数学竞赛爱好者</p>
+                            </div>
+                        </div>
+                        <div class="teammate-skills">
+                            <div class="skill-tag">高等数学</div>
+                            <div class="skill-tag">线性代数</div>
+                            <div class="skill-tag">概率统计</div>
+                        </div>
+                        <div class="teammate-interests">
+                            <h4>竞赛兴趣</h4>
+                            <div class="interests-list">
+                                <div class="interest-tag">AMC</div>
+                                <div class="interest-tag">数学奥林匹克</div>
+                            </div>
+                        </div>
+                        <div class="teammate-actions">
+                            <button class="btn-connect">联系队友</button>
+                            <button class="btn-message">发送消息</button>
+                        </div>
+                    </div>
+
+                    <div class="teammate-card">
+                        <div class="teammate-header">
+                            <div class="teammate-avatar">S</div>
+                            <div class="teammate-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>美国 · 波士顿高中</p>
+                                <p>物理竞赛专家</p>
+                            </div>
+                        </div>
+                        <div class="teammate-skills">
+                            <div class="skill-tag">力学</div>
+                            <div class="skill-tag">电磁学</div>
+                            <div class="skill-tag">量子物理</div>
+                        </div>
+                        <div class="teammate-interests">
+                            <h4>竞赛兴趣</h4>
+                            <div class="interests-list">
+                                <div class="interest-tag">物理碗</div>
+                                <div class="interest-tag">科学奥林匹克</div>
+                            </div>
+                        </div>
+                        <div class="teammate-actions">
+                            <button class="btn-connect">联系队友</button>
+                            <button class="btn-message">发送消息</button>
+                        </div>
+                    </div>
+
+                    <div class="teammate-card">
+                        <div class="teammate-header">
+                            <div class="teammate-avatar">R</div>
+                            <div class="teammate-info">
+                                <h3>Raj Patel</h3>
+                                <p>印度 · 德里高中</p>
+                                <p>编程竞赛高手</p>
+                            </div>
+                        </div>
+                        <div class="teammate-skills">
+                            <div class="skill-tag">算法设计</div>
+                            <div class="skill-tag">数据结构</div>
+                            <div class="skill-tag">动态规划</div>
+                        </div>
+                        <div class="teammate-interests">
+                            <h4>竞赛兴趣</h4>
+                            <div class="interests-list">
+                                <div class="interest-tag">USACO</div>
+                                <div class="interest-tag">ACM竞赛</div>
+                            </div>
+                        </div>
+                        <div class="teammate-actions">
+                            <button class="btn-connect">联系队友</button>
+                            <button class="btn-message">发送消息</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="loadingState" class="loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i> 正在搜索中...
+                </div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    没有找到匹配的队友，请尝试调整搜索条件
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>teamify</h3>
+                    <p>连接全球高中生，共赢国际竞赛</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>快速链接 Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">首页 Home</a></li>
+                            <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                            <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                            <li><a href="login.html">个人资料 Profile</a></li>
+                            <li><a href="about.html">团队介绍 About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 teamify. All Rights Reserved. | 国际高中生队友匹配平台 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/find-teammates.js"></script>
+</body>
+</html>

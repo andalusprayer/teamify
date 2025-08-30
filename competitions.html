@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞赛信息 | Competitions - teamify</title>
+    <meta name="description" content="浏览全球各类国际高中生竞赛信息，包括AMC数学竞赛、物理碗竞赛、USACO编程竞赛、科学奥林匹克、化学奥林匹克等。">
+    <meta name="keywords" content="国际竞赛,AMC数学竞赛,物理碗竞赛,USACO编程竞赛,科学奥林匹克,化学奥林匹克,高中生竞赛,比赛信息">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/competitions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">TeamMatch<span>Global</span></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" id="hideMenu"></i>
+                    <ul>
+                        <li><a href="index.html">首页 Home</a></li>
+                        <li><a href="competitions.html" class="active">竞赛信息 Competitions</a></li>
+                        <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                        <li><a href="profile.html">个人资料 Profile</a></li>
+                        <li><a href="about.html">团队介绍 About Us</a></li>
+                    </ul>
+                </div>
+                <div class="language-switch">
+                    <button id="langToggle">EN | 中文</button>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-login">登录 Login</a>
+                    <a href="register.html" class="btn btn-register">注册 Register</a>
+                </div>
+                <i class="fas fa-bars" id="showMenu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="competitions-hero">
+        <div class="container">
+            <h1>探索全球高中生竞赛机会</h1>
+            <h1 class="en">Explore Global High School Competition Opportunities</h1>
+            <p>发现适合高中生的国际竞赛，展示您的才华，结识志同道合的队友</p>
+            <p class="en">Discover international competitions suitable for high school students, showcase your talents, and meet like-minded teammates</p>
+            
+            <div class="search-filter">
+                <!-- 全新的搜索设计 -->
+                <div class="modern-search-container">
+                    <div class="search-header">
+                        <h2>🔍 智能搜索</h2>
+                        <p>输入关键词，发现适合你的竞赛机会</p>
+                    </div>
+                    
+                    <div class="search-input-group">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" id="searchInput" placeholder="搜索竞赛名称、类别或关键词，如：AMC、物理、经济..." class="modern-search-input">
+                        <button type="button" id="testSearch" class="search-test-btn">浏览所有竞赛</button>
+                    </div>
+                    
+                    <!-- 搜索建议容器 -->
+                    <div id="searchSuggestions" class="modern-suggestions"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="competitions-list" id="competitions">
+        <div class="container">
+            <h2>热门竞赛 <span class="highlight">Popular Competitions</span></h2>
+            <p class="section-description">探索当下最受欢迎的国际竞赛机会，展示您的才华与创新</p>
+            <p class="section-description en">Explore the most popular international competition opportunities to showcase your talent and innovation</p>
+            
+            <div class="competition-cards page-1">
+                <!-- AMC数学竞赛 AMC Mathematical Competition -->
+                <div class="competition-card" id="amc">
+                    <div class="competition-image">
+                        <img src="images/amc-math.svg" alt="AMC数学竞赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>AMC数学竞赛 (AMC 10/12)</h3>
+                        <h3 class="en">AMC Mathematical Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年2月15日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>AMC数学竞赛是美国数学协会主办的高中数学竞赛，分为AMC 10（10年级及以下）和AMC 12（12年级及以下），是进入美国数学奥林匹克的重要途径。</p>
+                        <p class="en">The AMC Mathematical Competition is a high school math competition hosted by the Mathematical Association of America, divided into AMC 10 (10th grade and below) and AMC 12 (12th grade and below), and is an important pathway to the US Mathematical Olympiad.</p>
+                        <div class="competition-tags">
+                            <span>数学竞赛 Math Competition</span>
+                            <span>问题解决 Problem Solving</span>
+                            <span>逻辑思维 Logical Thinking</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=amc" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=amc" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 物理碗竞赛 Physics Bowl Competition -->
+                <div class="competition-card" id="physics-bowl">
+                    <div class="competition-image">
+                        <img src="images/physics-bowl.svg" alt="物理碗竞赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>物理碗竞赛 Physics Bowl</h3>
+                        <h3 class="en">Physics Bowl Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年3月20日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>物理碗竞赛是美国物理教师协会主办的高中物理竞赛，测试学生的物理知识和解题能力，是展示物理才能的重要平台。</p>
+                        <p class="en">The Physics Bowl Competition is a high school physics competition hosted by the American Association of Physics Teachers, testing students' physics knowledge and problem-solving skills, and is an important platform for showcasing physics talents.</p>
+                        <div class="competition-tags">
+                            <span>物理竞赛 Physics Competition</span>
+                            <span>力学 Mechanics</span>
+                            <span>电磁学 Electromagnetism</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=physics-bowl" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=physics-bowl" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- USACO编程竞赛 USACO Programming Competition -->
+                <div class="competition-card" id="usaco">
+                    <div class="competition-image">
+                        <img src="images/usaco-coding.svg" alt="USACO编程竞赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>USACO编程竞赛</h3>
+                        <h3 class="en">USACO Programming Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年4月10日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>线上参与 Online</span>
+                            </div>
+                        </div>
+                        <p>USACO是美国计算机奥林匹克竞赛，旨在培养高中生的算法思维和编程技能，是进入国际信息学奥林匹克的重要途径。</p>
+                        <p class="en">USACO is the US Computing Olympiad, designed to develop high school students' algorithmic thinking and programming skills, and is an important pathway to the International Olympiad in Informatics.</p>
+                        <div class="competition-tags">
+                            <span>编程竞赛 Programming</span>
+                            <span>算法设计 Algorithm Design</span>
+                            <span>数据结构 Data Structures</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=usaco" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=usaco" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 科学奥林匹克 Science Olympiad -->
+                <div class="competition-card" id="science-olympiad">
+                    <div class="competition-image">
+                        <img src="images/science-olympiad.svg" alt="科学奥林匹克">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>科学奥林匹克 Science Olympiad</h3>
+                        <h3 class="en">Science Olympiad Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年5月15日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>团队参赛 Team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>美国各地 Various US Locations</span>
+                            </div>
+                        </div>
+                        <p>科学奥林匹克是一项综合性科学竞赛，涵盖物理、化学、生物、地球科学等多个学科，旨在激发学生对科学的兴趣和探索精神。</p>
+                        <p class="en">Science Olympiad is a comprehensive science competition covering physics, chemistry, biology, earth science and other subjects, aiming to inspire students' interest in science and spirit of exploration.</p>
+                        <div class="competition-tags">
+                            <span>科学竞赛 Science Competition</span>
+                            <span>实验技能 Lab Skills</span>
+                            <span>科学知识 Science Knowledge</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=science-olympiad" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=science-olympiad" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 化学奥林匹克 Chemistry Olympiad -->
+                <div class="competition-card" id="chemistry">
+                    <div class="competition-image">
+                        <img src="images/chemistry-olympiad.svg" alt="化学奥林匹克">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>化学奥林匹克 Chemistry Olympiad</h3>
+                        <h3 class="en">Chemistry Olympiad Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年7月10日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>国际化学奥林匹克竞赛是面向高中生的顶级化学竞赛，挑战学生的化学理论知识和实验技能，是展示化学才能的国际平台。</p>
+                        <p class="en">The International Chemistry Olympiad is a top-level chemistry competition for high school students, challenging students' chemical theory knowledge and experimental skills, and is an international platform for showcasing chemistry talents.</p>
+                        <div class="competition-tags">
+                            <span>化学竞赛 Chemistry Competition</span>
+                            <span>实验技能 Lab Skills</span>
+                            <span>化学理论 Chemical Theory</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=chemistry" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=chemistry" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 第二页竞赛 -->
+            <div class="competition-cards page-2" style="display: none;">
+                <!-- Euclid数学竞赛 Euclid Mathematics Competition -->
+                <div class="competition-card" id="euclid">
+                    <div class="competition-image">
+                        <img src="images/euclid-math.svg" alt="Euclid数学竞赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>Euclid数学竞赛 Euclid Mathematics Competition</h3>
+                        <h3 class="en">Euclid Mathematics Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年4月5日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>由滑铁卢大学主办的加拿大欧几里得数学竞赛，难度高，全球认可度强，是申请加拿大顶尖大学的重要加分项。</p>
+                        <p class="en">Hosted by the University of Waterloo, the Euclid Mathematics Competition is a high-difficulty competition with strong global recognition and is an important addition for applying to top Canadian universities.</p>
+                        <div class="competition-tags">
+                            <span>数学竞赛 Math Competition</span>
+                            <span>欧几里得几何 Euclidean Geometry</span>
+                            <span>问题解决 Problem Solving</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=euclid" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=euclid" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HMMT数学竞赛 Harvard-MIT Mathematics Tournament -->
+                <div class="competition-card" id="hmmt">
+                    <div class="competition-image">
+                        <img src="images/hmmt-math.svg" alt="HMMT数学竞赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>HMMT数学竞赛 Harvard-MIT Mathematics Tournament</h3>
+                        <h3 class="en">Harvard-MIT Mathematics Tournament</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年11月16日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人/团队 Individual/Team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>美国剑桥 Cambridge, USA</span>
+                            </div>
+                        </div>
+                        <p>世界顶尖数学竞赛之一，由哈佛大学和麻省理工学院联合主办，适合数学能力强的学生，是展示数学才华的顶级平台。</p>
+                        <p class="en">One of the world's top mathematics competitions, jointly hosted by Harvard University and MIT, suitable for students with strong mathematical abilities, and is a top platform for showcasing mathematical talents.</p>
+                        <div class="competition-tags">
+                            <span>数学竞赛 Math Competition</span>
+                            <span>顶尖赛事 Top Tournament</span>
+                            <span>数学思维 Mathematical Thinking</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=hmmt" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=hmmt" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BPhO英国物理奥林匹克 British Physics Olympiad -->
+                <div class="competition-card" id="bpho">
+                    <div class="competition-image">
+                        <img src="images/bpho-physics.svg" alt="BPhO英国物理奥林匹克">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>BPhO英国物理奥林匹克 British Physics Olympiad</h3>
+                        <h3 class="en">British Physics Olympiad</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年11月30日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>英国 UK</span>
+                            </div>
+                        </div>
+                        <p>由牛津大学等机构主办的英国物理奥林匹克竞赛，学术性强，适合申请英美理工科的学生，是展示物理才能的重要平台。</p>
+                        <p class="en">Hosted by institutions including Oxford University, the British Physics Olympiad is academically rigorous and suitable for students applying to science and engineering programs in the UK and US.</p>
+                        <div class="competition-tags">
+                            <span>物理竞赛 Physics Competition</span>
+                            <span>英国竞赛 UK Competition</span>
+                            <span>学术性强 Academic Rigor</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=bpho" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=bpho" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UKChO英国化学奥林匹克 UK Chemistry Olympiad -->
+                <div class="competition-card" id="ukcho">
+                    <div class="competition-image">
+                        <img src="images/ukcho-chemistry.svg" alt="UKChO英国化学奥林匹克">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>UKChO英国化学奥林匹克 UK Chemistry Olympiad</h3>
+                        <h3 class="en">UK Chemistry Olympiad</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年1月25日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人参赛 Individual</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>英国 UK</span>
+                            </div>
+                        </div>
+                        <p>英国皇家化学学会主办的化学奥林匹克竞赛，学术性强，注重化学理论和实验技能，是申请英国顶尖大学的重要加分项。</p>
+                        <p class="en">Hosted by the Royal Society of Chemistry, the UK Chemistry Olympiad emphasizes chemical theory and experimental skills, and is an important addition for applying to top UK universities.</p>
+                        <div class="competition-tags">
+                            <span>化学竞赛 Chemistry Competition</span>
+                            <span>英国竞赛 UK Competition</span>
+                            <span>皇家化学学会 RSC</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=ukcho" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=ukcho" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三页竞赛 -->
+            <div class="competition-cards page-3" style="display: none;">
+                <!-- NEC全美经济挑战赛 National Economics Challenge -->
+                <div class="competition-card" id="nec">
+                    <div class="competition-image">
+                        <img src="images/nec-economics.svg" alt="NEC全美经济挑战赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>NEC全美经济挑战赛 National Economics Challenge</h3>
+                        <h3 class="en">National Economics Challenge</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年4月20日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>4人团队 4-person team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>美国 USA</span>
+                            </div>
+                        </div>
+                        <p>美国最具影响力的经济学竞赛之一，由美联储主办，测试学生的经济学知识、分析能力和团队合作精神。</p>
+                        <p class="en">One of the most influential economics competitions in the US, hosted by the Federal Reserve, testing students' economics knowledge, analytical abilities, and teamwork.</p>
+                        <div class="competition-tags">
+                            <span>经济学竞赛 Economics Competition</span>
+                            <span>美联储主办 Federal Reserve</span>
+                            <span>团队合作 Teamwork</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=nec" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=nec" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 沃顿商赛 Wharton Global High School Investment Competition -->
+                <div class="competition-card" id="wharton">
+                    <div class="competition-image">
+                        <img src="images/wharton-business.svg" alt="沃顿商赛">
+                        <div class="competition-status ongoing">正在进行 Ongoing</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>沃顿商赛 Wharton Global High School Investment Competition</h3>
+                        <h3 class="en">Wharton Global High School Investment Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年1月15日 - 5月30日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>4-7人团队 4-7 person team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>由宾大沃顿商学院主办的高中投资竞赛，专注投资与商业分析，是展示商业才能和金融分析能力的重要平台。</p>
+                        <p class="en">Hosted by the Wharton School at the University of Pennsylvania, this high school investment competition focuses on investment and business analysis, and is an important platform for showcasing business talents and financial analysis skills.</p>
+                        <div class="competition-tags">
+                            <span>商业竞赛 Business Competition</span>
+                            <span>投资分析 Investment Analysis</span>
+                            <span>沃顿商学院 Wharton</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=wharton" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=wharton" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 丘成桐中学科学奖 Yau Science Awards -->
+                <div class="competition-card" id="yau-awards">
+                    <div class="competition-image">
+                        <img src="images/yau-science.svg" alt="丘成桐中学科学奖">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>丘成桐中学科学奖 Yau Science Awards</h3>
+                        <h3 class="en">Yau Science Awards</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年6月1日 - 12月15日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>个人/团队 Individual/Team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>全球参与 Global</span>
+                            </div>
+                        </div>
+                        <p>涵盖数学、物理、化学、生物、计算机、经济等六大学科，以研究论文形式参赛，是展示科研能力的重要平台。</p>
+                        <p class="en">Covering six major disciplines including mathematics, physics, chemistry, biology, computer science, and economics, participants submit research papers, making it an important platform for showcasing research capabilities.</p>
+                        <div class="competition-tags">
+                            <span>科学竞赛 Science Competition</span>
+                            <span>研究论文 Research Paper</span>
+                            <span>跨学科 Cross-disciplinary</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=yau-awards" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=yau-awards" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iGEM国际基因工程机器大赛 International Genetically Engineered Machine -->
+                <div class="competition-card" id="igem">
+                    <div class="competition-image">
+                        <img src="images/igem-biology.svg" alt="iGEM国际基因工程机器大赛">
+                        <div class="competition-status upcoming">即将开始 Upcoming</div>
+                    </div>
+                    <div class="competition-content">
+                        <h3>iGEM国际基因工程机器大赛 International Genetically Engineered Machine</h3>
+                        <h3 class="en">International Genetically Engineered Machine Competition</h3>
+                        <div class="competition-info">
+                            <div class="info-item">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2024年3月1日 - 11月15日</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>6-15人团队 6-15 person team</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <span>美国波士顿 Boston, USA</span>
+                            </div>
+                        </div>
+                        <p>跨学科竞赛，涉及生物、编程、统计等，学生需要设计、构建和测试生物系统，是展示创新能力和团队合作的重要平台。</p>
+                        <p class="en">A cross-disciplinary competition involving biology, programming, and statistics, where students design, build, and test biological systems, making it an important platform for showcasing innovation and teamwork.</p>
+                        <div class="competition-tags">
+                            <span>生物竞赛 Biology Competition</span>
+                            <span>基因工程 Genetic Engineering</span>
+                            <span>跨学科 Cross-disciplinary</span>
+                        </div>
+                        <div class="competition-actions">
+                            <a href="competition-details.html?id=igem" class="btn btn-outline">查看详情 View Details</a>
+                            <a href="find-teammates.html?competition=igem" class="btn btn-primary">寻找队友 Find Teammates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn active" data-page="1">1</button>
+                <button class="pagination-btn" data-page="2">2</button>
+                <button class="pagination-btn" data-page="3">3</button>
+                <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="competition-calendar">
+        <div class="container">
+            <h2>竞赛日历 Competition Calendar</h2>
+            <p>查看即将到来的竞赛时间表，提前做好准备</p>
+            <p class="en">View the upcoming competition schedule and prepare in advance</p>
+            
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">2023年12月 December 2023</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-day-names">
+                        <div>日 Sun</div>
+                        <div>一 Mon</div>
+                        <div>二 Tue</div>
+                        <div>三 Wed</div>
+                        <div>四 Thu</div>
+                        <div>五 Fri</div>
+                        <div>六 Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- 日历天数由JavaScript动态生成 Calendar days will be dynamically generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="upcoming-events">
+                <h3>本月重要日期 Important Dates This Month</h3>
+                <div class="event-list" id="eventList">
+                    <!-- 事件列表由JavaScript动态生成 Event list will be dynamically generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="competition-resources">
+        <div class="container">
+            <h2>竞赛资源 Competition Resources</h2>
+            <p>获取有价值的资源，提升您的竞赛表现</p>
+            <p class="en">Access valuable resources to enhance your competition performance</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>学习资料 Learning Materials</h3>
+                    <p>访问各类竞赛的学习资料、教程和指南</p>
+                    <p class="en">Access learning materials, tutorials, and guides for various competitions</p>
+                    <a href="resources.html#learning" class="btn btn-outline">浏览资料 Browse Materials</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>视频讲座 Video Lectures</h3>
+                    <p>观看专家讲座和竞赛技巧分享视频</p>
+                    <p class="en">Watch expert lectures and competition tips sharing videos</p>
+                    <a href="resources.html#videos" class="btn btn-outline">观看视频 Watch Videos</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>往届案例 Past Cases</h3>
+                    <p>查看往届竞赛案例和获奖作品</p>
+                    <p class="en">View past competition cases and winning works</p>
+                    <a href="resources.html#cases" class="btn btn-outline">查看案例 View Cases</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>导师指导 Mentorship</h3>
+                    <p>获取经验丰富的导师指导和建议</p>
+                    <p class="en">Get guidance and advice from experienced mentors</p>
+                    <a href="resources.html#mentorship" class="btn btn-outline">寻找导师 Find Mentors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>准备好参加竞赛了吗？</h2>
+            <h2 class="en">Ready to Join Competitions?</h2>
+            <p>注册账号，开始寻找最佳队友，一起赢得国际竞赛！</p>
+            <p class="en">Register an account and start finding the best teammates to win international competitions together!</p>
+            <div class="cta-buttons">
+                <a href="register.html" class="btn btn-primary">立即注册 Register Now</a>
+                <a href="find-teammates.html" class="btn btn-outline">寻找队友 Find Teammates</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>TeamMatch<span>Global</span></h3>
+                    <p>连接全球高中生，共赢国际竞赛</p>
+                    <p class="en">Connecting Global High School Students, Winning International Competitions Together</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>快速链接 Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">首页 Home</a></li>
+                            <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                            <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                            <li><a href="profile.html">个人资料 Profile</a></li>
+                         <li><a href="about.html">团队介绍 About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>热门竞赛 Popular Competitions</h4>
+                        <ul>
+                            <li><a href="#amc">AMC数学竞赛 AMC Math</a></li>
+                            <li><a href="#euclid">Euclid数学竞赛 Euclid</a></li>
+                            <li><a href="#hmmt">HMMT数学竞赛 HMMT</a></li>
+                            <li><a href="#nec">NEC经济挑战赛 NEC</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>关于我们 About Us</h4>
+                        <ul>
+                            <li><a href="about.html">团队介绍 Our Team</a></li>
+                            <li><a href="contact.html">联系我们 Contact Us</a></li>
+                            <li><a href="privacy-policy.html">隐私政策 Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html">使用条款 Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>关注我们 Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 teamify. All Rights Reserved. | 国际高中生队友匹配平台 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/competitions.js"></script>
+    <script>
+        // 正式版现代搜索功能
+        console.log('=== 加载搜索功能 ===');
+        
+        // 竞赛数据库 - 全局变量
+        window.competitionsData = [
+            // 🧮 数学类
+            { id: 'amc8', name: 'AMC 8数学竞赛', category: '数学', icon: '🧮', description: '美国数学思维挑战赛，8年级及以下学生参加，全球影响力极大' },
+            { id: 'amc10', name: 'AMC 10数学竞赛', category: '数学', icon: '🧮', description: '美国数学思维挑战赛，10年级及以下学生参加，可晋级AIME' },
+            { id: 'amc12', name: 'AMC 12数学竞赛', category: '数学', icon: '🧮', description: '美国数学思维挑战赛，12年级及以下学生参加，可晋级AIME' },
+            { id: 'aime', name: 'AIME数学邀请赛', category: '数学', icon: '🧮', description: 'AMC10/12晋级赛，通向美国数学奥林匹克（USAMO）' },
+            { id: 'euclid', name: '欧几里得数学竞赛', category: '数学', icon: '🧮', description: '加拿大滑铁卢大学主办，北美名校认可度高' },
+            { id: 'kangaroo', name: '袋鼠数学竞赛', category: '数学', icon: '🧮', description: '全球最大规模青少年数学赛，低龄段"天花板"' },
+            { id: 'aimo', name: '澳大利亚数学奥赛', category: '数学', icon: '🧮', description: 'AMT主办，3-12年级均可参加' },
+            { id: 'caribou', name: '北美驯鹿数学赛', category: '数学', icon: '🧮', description: '加拿大数学会支持，线上国际赛' },
+            { id: 'hmmt', name: 'HMMT数学竞赛', category: '数学', icon: '🧮', description: '哈佛-麻省理工数学竞赛，名校认可度高' },
+            { id: 'putnam', name: '普特南数学竞赛', category: '数学', icon: '🧮', description: '美国大学生数学竞赛，数学能力证明' },
+            { id: 'imo', name: '国际数学奥林匹克', category: '数学', icon: '🧮', description: '全球最高水平的数学竞赛，IMO金牌含金量极高' },
+            
+            // 🔬 理科类
+            { id: 'physics-bowl', name: '物理碗竞赛', category: '物理', icon: '⚛️', description: '美国物理教师协会主办，全球高中生物理思维挑战' },
+            { id: 'bpho', name: '英国物理奥林匹克', category: '物理', icon: '⚛️', description: '高含金量物理学科赛事，英国名校认可' },
+            { id: 'asop', name: '澳大利亚物理奥赛', category: '物理', icon: '⚛️', description: '高含金量物理学科赛事，澳洲名校认可' },
+            { id: 'iypt', name: '国际青年物理学家锦标赛', category: '物理', icon: '⚛️', description: '"物理世界杯"，团队科研型比赛' },
+            { id: 'ipho', name: '国际物理奥林匹克', category: '物理', icon: '⚛️', description: '全球最高水平的物理竞赛，IPhO金牌含金量极高' },
+            { id: 'usabo', name: '美国生物奥林匹克', category: '生物', icon: '🧬', description: '生物学科顶级赛事，美国名校认可' },
+            { id: 'bbo', name: '英国生物奥林匹克', category: '生物', icon: '🧬', description: '生物学科顶级赛事，英国名校认可' },
+            { id: 'biology-olympiad', name: '国际生物奥林匹克', category: '生物', icon: '🧬', description: '全球最高水平的生物学科竞赛，IBO金牌含金量极高' },
+            { id: 'igem', name: '国际基因工程机器大赛', category: '生物', icon: '🧬', description: '麻省理工创办，合成生物学领域顶尖赛事' },
+            { id: 'chemistry-olympiad', name: '国际化学奥林匹克', category: '化学', icon: '🧪', description: '全球最高水平中学生化学赛事，IChO金牌含金量极高' },
+            { id: 'usaco', name: 'USACO编程竞赛', category: '编程', icon: '💻', description: '美国计算机奥林匹克竞赛，计算机算法与编程顶级赛事' },
+            { id: 'noi', name: '信息学奥林匹克', category: '编程', icon: '💻', description: '计算机算法与编程顶级赛事，全球认可' },
+            { id: 'ioi', name: '国际信息学奥林匹克', category: '编程', icon: '💻', description: '全球最高水平的编程竞赛，IOI金牌含金量极高' },
+            
+            // 📊 商科与经济类
+            { id: 'nec', name: 'NEC经济挑战赛', category: '经济', icon: '📊', description: '全美经济学挑战赛，全球参与度高，藤校及G5名校认可' },
+            { id: 'ieo', name: '国际经济学奥林匹克', category: '经济', icon: '📊', description: '全球13大国际科学奥赛之一，经济学顶级赛事' },
+            { id: 'bpa', name: 'BPA商业竞赛', category: '经济', icon: '📊', description: '美国三大商赛之一，商业综合能力比拼' },
+            { id: 'deca', name: 'DECA商业竞赛', category: '经济', icon: '📊', description: '美国三大商赛之一，管理能力比拼' },
+            { id: 'fbla', name: 'FBLA商业竞赛', category: '经济', icon: '📊', description: '美国三大商赛之一，市场营销能力比拼' },
+            { id: 'wghs', name: '沃顿全球高中生投资比赛', category: '经济', icon: '📊', description: '宾大沃顿商学院主办，金融投资实战' },
+            { id: 'eeo', name: '欧洲经济学挑战', category: '经济', icon: '📊', description: '欧洲发起，现已全球化的经济学赛事' },
+            
+            // ✍️ 人文与写作类
+            { id: 'john-locke', name: '约翰·洛克论文赛', category: '人文', icon: '✍️', description: '牛津、普林斯顿等名校教授参与评审，人文写作顶级赛事' },
+            { id: 'nyt-writing', name: '纽约时报写作赛', category: '人文', icon: '✍️', description: '英文写作与时事思辨结合，全球影响力大' },
+            { id: 'tcr-history', name: 'TCR历史论文赛', category: '人文', icon: '✍️', description: '高中历史学科顶级期刊征文，学术价值高' },
+            { id: 'marshall-economics', name: '马歇尔学会经济论文赛', category: '人文', icon: '✍️', description: '剑桥大学经济学会主办，经济学论文顶级赛事' },
+            
+            // 💡 科创与跨学科类
+            { id: 'yau-science', name: '丘成桐中学科学奖', category: '创新', icon: '💡', description: '华人中学生科技创新权威奖项，全球认可' },
+            { id: 'himcm', name: '高中数学建模赛', category: '创新', icon: '💡', description: '全球知名数学建模赛事，申请名校加分利器' },
+            { id: 'google-science', name: '谷歌科学博览会', category: '创新', icon: '💡', description: '面向全球13-18岁学生的创新科技项目赛' },
+            { id: 'regeneron-isef', name: '国际科学与工程大奖赛', category: '创新', icon: '💡', description: '全球最大规模中学生科研竞赛，ISEF含金量极高' }
+        ];
+        
+        // 等待DOM元素
+        function waitForElements() {
+            const searchInput = document.getElementById('searchInput');
+            const searchSuggestions = document.getElementById('searchSuggestions');
+            const testButton = document.getElementById('testSearch');
+            
+            if (!searchInput || !searchSuggestions) {
+                showDebug('等待DOM元素加载...');
+                setTimeout(waitForElements, 100);
+                return;
+            }
+            
+            // 移除调试代码
+            // showDebug('DOM元素找到，开始设置功能');
+            setupSearch();
+        }
+        
+        // 设置搜索功能
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchSuggestions = document.getElementById('searchSuggestions');
+            const testButton = document.getElementById('testSearch');
+            
+            // 移除调试代码
+            // showDebug('开始设置搜索功能...');
+            
+            // 显示建议
+            function showSuggestions(data) {
+                if (!searchSuggestions || !searchInput) {
+                    console.log('搜索元素未找到，跳过显示建议');
+                    return;
+                }
+                
+                if (data.length === 0) {
+                    hideSuggestions();
+                    return;
+                }
+                
+                try {
+                    const suggestionsHtml = data.map(item => `
+                        <div class="suggestion-item" onclick="selectItem('${item.id}', '${item.name}', '${item.description}')">
+                            <div class="suggestion-icon">${item.icon}</div>
+                            <div class="suggestion-content">
+                                <div class="suggestion-name">${item.name}</div>
+                                <div class="suggestion-category">${item.description}</div>
+                            </div>
+                            <div class="suggestion-tag">${item.category}</div>
+                        </div>
+                    `).join('');
+                    
+                    searchSuggestions.innerHTML = suggestionsHtml;
+                    searchSuggestions.style.display = 'block';
+                    
+                    // 强制显示
+                    setTimeout(() => {
+                        if (searchSuggestions) {
+                            searchSuggestions.style.opacity = '1';
+                            searchSuggestions.style.transform = 'translateY(0)';
+                            searchSuggestions.classList.add('show');
+                        }
+                    }, 10);
+                    
+                    console.log(`显示 ${data.length} 个搜索建议`);
+                } catch (error) {
+                    console.error('显示搜索建议时出错:', error);
+                    hideSuggestions();
+                }
+            }
+            
+            // 隐藏建议
+            function hideSuggestions() {
+                if (!searchSuggestions) {
+                    console.log('搜索建议容器不存在，跳过隐藏');
+                    return;
+                }
+                
+                try {
+                    searchSuggestions.classList.remove('show');
+                    setTimeout(() => {
+                        if (searchSuggestions) {
+                            searchSuggestions.style.display = 'none';
+                        }
+                    }, 300);
+                } catch (error) {
+                    console.error('隐藏搜索建议时出错:', error);
+                }
+            }
+            
+            // 全局隐藏函数
+            window.hideSuggestions = hideSuggestions;
+            
+            // 搜索输入事件
+            searchInput.addEventListener('input', function() {
+                const query = this.value.trim();
+                
+                if (query.length < 2) {
+                    hideSuggestions();
+                    return;
+                }
+                
+                const suggestions = window.competitionsData.filter(item => 
+                    item.name.toLowerCase().includes(query.toLowerCase()) ||
+                    item.category.toLowerCase().includes(query.toLowerCase()) ||
+                    item.description.toLowerCase().includes(query.toLowerCase())
+                );
+                
+                showSuggestions(suggestions);
+            });
+            
+            // 智能搜索提示
+            searchInput.addEventListener('focus', function() {
+                console.log('搜索框获得焦点，显示默认建议');
+                if (this.value.trim() === '') {
+                    const defaultSuggestions = window.competitionsData.slice(0, 8);
+                    console.log(`准备显示 ${defaultSuggestions.length} 个默认建议:`, defaultSuggestions);
+                    showSuggestions(defaultSuggestions);
+                }
+            });
+            
+            // 测试按钮事件
+            if (testButton) {
+                testButton.addEventListener('click', function() {
+                    showSuggestions(window.competitionsData);
+                });
+            }
+            
+            // 点击外部隐藏建议
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.modern-search-container')) {
+                    hideSuggestions();
+                }
+            });
+            
+            console.log('搜索功能初始化完成');
+        }
+        
+        // 全局选择函数
+        window.selectItem = function(id, name, description) {
+            try {
+                console.log(`选择了竞赛: ${name} (${id})`);
+                
+                // 隐藏建议
+                const searchSuggestions = document.getElementById('searchSuggestions');
+                if (searchSuggestions) {
+                    searchSuggestions.classList.remove('show');
+                    setTimeout(() => {
+                        if (searchSuggestions) {
+                            searchSuggestions.style.display = 'none';
+                        }
+                    }, 300);
+                }
+                
+                // 清空搜索框
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) {
+                    searchInput.value = '';
+                }
+                
+                // 尝试滚动到对应的竞赛卡片
+                const competitionCard = document.getElementById(id);
+                if (competitionCard) {
+                    competitionCard.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // 添加高亮效果
+                    competitionCard.style.animation = 'pulse 0.6s ease';
+                    setTimeout(() => {
+                        if (competitionCard) {
+                            competitionCard.style.animation = '';
+                        }
+                    }, 600);
+                }
+                
+            } catch (error) {
+                console.error('选择竞赛时出错:', error);
+            }
+        };
+        
+        // 开始等待
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', waitForElements);
+        } else {
+            waitForElements();
+        }
+        
+        // 备用方法
+        window.addEventListener('load', function() {
+            console.log('window.load 触发，再次尝试初始化');
+            setTimeout(waitForElements, 100);
+        });
+        
+        console.log('=== 现代搜索功能加载完成 ===');
+    </script>
+    
+    <!-- 引入竞赛页面JavaScript - 已在第731行引入，此处删除重复引用 -->
+    
+    <style>
+        /* 搜索建议动画和防闪退样式 */
+        .modern-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            max-height: 400px;
+            overflow-y: auto;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(-10px);
+            display: none;
+            margin-top: 5px;
+        }
+        
+        .modern-suggestions.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .suggestion-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .suggestion-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .suggestions-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .suggestions-header h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+            padding: 5px;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        .suggestion-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .suggestion-content {
+            flex: 1;
+        }
+        
+        .suggestion-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        
+        .suggestion-category {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 2px;
+        }
+        
+        .suggestion-description {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        .suggestion-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        /* 脉冲动画 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* 防止搜索框闪烁 */
+        .modern-search-input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        /* 搜索容器相对定位 */
+        .modern-search-container {
+            position: relative;
+        }
+    </style>
+</body>
+</html>

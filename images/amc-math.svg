@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#3498db" />
+  <text x="100" y="100" font-family="Arial" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle">AMC 数学竞赛</text>
+  <text x="100" y="130" font-family="Arial" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">AMC Math</text>
+  <g transform="translate(100, 60)">
+    <path d="M-20,0 L20,0 M0,-20 L0,20" stroke="white" stroke-width="3" />
+    <circle cx="0" cy="0" r="15" stroke="white" stroke-width="2" fill="none" />
+  </g>
+</svg>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队介绍 | About Us - teamify</title>
+    <meta name="description" content="了解teamify团队的目标、理想、初衷和优势">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        
+        .section { padding: 80px 0; }
+        .section:nth-child(even) { background: #f8f9fa; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
+        
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); }
+        
+        .icon { font-size: 3rem; margin-bottom: 20px; color: #667eea; }
+        
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .avatar {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .info { padding: 25px; }
+        .name { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+        .role { color: #667eea; font-weight: 500; margin-bottom: 15px; }
+        .desc { color: #666; line-height: 1.6; }
+        
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin: 10px;
+        }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-outline { border: 2px solid #667eea; color: #667eea; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid, .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">TeamMatch<span>Global</span></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="competitions.html">竞赛信息</a></li>
+                        <li><a href="find-teammates.html">寻找队友</a></li>
+                        <li><a href="about.html" class="active">团队介绍</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>关于我们的团队</h1>
+                <p>九名来自国际学校的高中生，致力于为全球高中生搭建最优质的竞赛队友匹配平台</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">我们的使命与愿景</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon">🎯</div>
+                        <h3>核心目标</h3>
+                        <p>打造全球领先的高中生竞赛队友匹配平台，通过智能算法和精准匹配，帮助每个学生找到最适合的团队伙伴，共同在国际竞赛中取得优异成绩。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">🌟</div>
+                        <h3>远大理想</h3>
+                        <p>成为连接全球优秀高中生的桥梁，打破地域、语言和文化的界限，让每个有梦想的学生都能在国际舞台上展现才华，实现跨文化的学术合作与友谊。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">💡</div>
+                        <h3>项目初衷</h3>
+                        <p>源于我们自身参加国际竞赛时遇到的困难——难以找到合适的队友。作为高中生，我们深知优秀团队的重要性，希望通过这个项目解决全球高中生共同面临的问题。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">我们的九人团队</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 40px;">来自不同国际学校的九名高中生，共同致力于改变国际竞赛的队友匹配方式</p>
+                
+                <div class="team-grid">
+                    <div class="member">
+                        <div class="avatar">👨‍💻</div>
+                        <div class="info">
+                            <div class="name">Alex</div>
+                            <div class="role">技术开发负责人</div>
+                            <div class="desc">国际学校12年级学生，编程竞赛金牌获得者</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👩‍🎓</div>
+                        <div class="info">
+                            <div class="name">Emma</div>
+                            <div class="role">产品设计负责人</div>
+                            <div class="desc">国际学校12年级学生，AMC数学竞赛金牌</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👨‍🔬</div>
+                        <div class="info">
+                            <div class="name">Ryan</div>
+                            <div class="role">算法优化负责人</div>
+                            <div class="desc">国际学校12年级学生，USACO编程竞赛银牌</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👩‍💼</div>
+                        <div class="info">
+                            <div class="name">Sophie</div>
+                            <div class="role">用户体验负责人</div>
+                            <div class="desc">国际学校11年级学生，设计竞赛获奖者</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👨‍🌐</div>
+                        <div class="info">
+                            <div class="name">Lucas</div>
+                            <div class="role">国际化负责人</div>
+                            <div class="desc">国际学校12年级学生，多语言能力突出</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👩‍🔧</div>
+                        <div class="info">
+                            <div class="name">Isabella</div>
+                            <div class="role">系统架构负责人</div>
+                            <div class="desc">国际学校11年级学生，计算机科学爱好者</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👨‍📊</div>
+                        <div class="info">
+                            <div class="name">Ethan</div>
+                            <div class="role">数据分析负责人</div>
+                            <div class="desc">国际学校12年级学生，数学建模竞赛获奖</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👩‍🎨</div>
+                        <div class="info">
+                            <div class="name">Olivia</div>
+                            <div class="role">市场推广负责人</div>
+                            <div class="desc">国际学校11年级学生，学生社团活跃分子</div>
+                        </div>
+                    </div>
+                    
+                    <div class="member">
+                        <div class="avatar">👨‍⚖️</div>
+                        <div class="info">
+                            <div class="name">Nathan</div>
+                            <div class="role">合规管理负责人</div>
+                            <div class="desc">国际学校12年级学生，法律知识丰富</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">我们的核心优势</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon">🧠</div>
+                        <h3>年轻有为</h3>
+                        <p>九名国际学校高中生，拥有丰富的国际竞赛经验，算法匹配精准度达到95%以上</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">🌍</div>
+                        <h3>全球化视野</h3>
+                        <p>团队成员来自不同国际学校，深谙国际竞赛规则，为全球学生提供专业服务</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">🎯</div>
+                        <h3>亲身经历丰富</h3>
+                        <p>团队成员都曾参与国际竞赛，亲身经历让我们更懂学生的需求和痛点</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">⚡</div>
+                        <h3>创新思维活跃</h3>
+                        <p>作为高中生，我们拥有活跃的创新思维，能够快速学习和应用最新技术</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">🤝</div>
+                        <h3>团队协作默契</h3>
+                        <p>九人团队分工明确，配合默契，能够快速响应同学的需求和反馈</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon">💎</div>
+                        <h3>同龄人服务</h3>
+                        <p>由高中生为高中生服务，我们最了解同龄人的需求和想法</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 10px;">50+</h3>
+                        <p>覆盖国家</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 10px;">10,000+</h3>
+                        <p>成功匹配</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 10px;">95%+</h3>
+                        <p>用户满意度</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 10px;">24/7</h3>
+                        <p>服务支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">加入我们，开启国际竞赛之旅</h2>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px;">无论你来自哪里，无论你擅长什么，我们都能帮你找到最合适的竞赛伙伴</p>
+                <div>
+                    <a href="find-teammates.html" class="btn btn-primary">立即寻找队友</a>
+                    <a href="register.html" class="btn btn-outline">注册账号</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #333; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+                            <p>&copy; 2023 teamify. All Rights Reserved. | 国际高中生队友匹配平台 - 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>

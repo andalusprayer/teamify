@@ -1,0 +1,1416 @@
+/* 竞赛页面样式 Competition Page Styles */
+
+/* CSS变量定义 CSS Variables */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
+    --glass-hover-bg: rgba(255, 255, 255, 0.25);
+    --glass-hover-border: rgba(255, 255, 255, 0.5);
+    --glass-hover-shadow: rgba(0, 0, 0, 0.2);
+    --primary-color: #3498db;
+    --primary-light: rgba(52, 152, 219, 0.8);
+    --primary-glow: rgba(52, 152, 219, 0.3);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --backdrop-blur: blur(15px);
+    --border-radius-large: 20px;
+    --border-radius-medium: 15px;
+    --border-radius-small: 10px;
+}
+
+/* 竞赛英雄区域 Competition Hero Section */
+.competitions-hero {
+    background: linear-gradient(135deg, #2c3e50, #4a69bd);
+    color: #fff;
+    padding: 80px 0 40px;
+    text-align: center;
+}
+
+.competitions-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.competitions-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+/* 搜索和过滤区域 Search and Filter Area */
+.search-filter {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.search-filter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+/* 现代搜索容器 */
+.modern-search-container {
+    position: relative;
+    z-index: 1;
+}
+
+.search-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #fff, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.search-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.search-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.search-input-group:focus-within {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.modern-search-input {
+    flex: 1;
+    padding: 18px 20px 18px 60px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.modern-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-test-btn {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.search-test-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* 现代搜索建议 */
+.modern-suggestions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.modern-suggestions.show {
+    opacity: 1;
+}
+
+.modern-suggestions .suggestions-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.suggestions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 2px solid #f0f0f0;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.suggestions-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.suggestions-list {
+    max-height: calc(80vh - 80px);
+    overflow-y: auto;
+    padding: 0;
+}
+
+.modern-suggestions.show {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 10000;
+}
+
+.suggestion-item {
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.suggestion-item:hover {
+    background: linear-gradient(45deg, #f8f9fa, #e3f2fd);
+    transform: translateX(10px);
+    border-left: 4px solid #3498db;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-icon {
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+}
+
+.suggestion-content {
+    flex: 1;
+}
+
+.suggestion-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.suggestion-category {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.suggestion-description {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.suggestion-tag {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+
+
+/* 调试面板 */
+.debug-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.debug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.debug-header span {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+.debug-toggle {
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.debug-toggle:hover {
+    background: rgba(52, 152, 219, 1);
+    transform: translateY(-1px);
+}
+
+.debug-content {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-medium);
+    padding: 5px;
+    box-shadow: 0 4px 20px var(--glass-shadow);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.search-box.glass-effect:hover,
+.search-box.glass-effect:focus-within {
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border);
+    box-shadow: 0 8px 30px var(--glass-hover-shadow);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 18px 20px 18px 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.search-box input:focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+    margin-top: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search-suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    background: white;
+}
+
+.search-suggestion-item:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: #333;
+}
+
+.search-suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.suggestion-text {
+    flex: 1;
+}
+
+.suggestion-category {
+    font-size: 0.8rem;
+    color: #666;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* 强制显示搜索建议 */
+.search-suggestions.show {
+    display: block !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(52, 152, 219, 0.3) !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2) !important;
+    z-index: 1001 !important;
+}
+
+/* 调试样式 - 确保搜索建议可见 */
+.search-suggestions {
+    min-height: 50px;
+}
+
+.search-suggestions:not([style*="display: none"]) {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(52, 152, 219, 0.3) !important;
+}
+
+/* 测试时的明显样式 */
+.search-suggestions[style*="display: block"] {
+    background: rgba(255, 255, 255, 1) !important;
+    border: 2px solid #3498db !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3) !important;
+    z-index: 1002 !important;
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.filter-options select {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-medium);
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    min-width: 160px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 20px var(--glass-shadow);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-options select::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-options select:hover::before {
+    left: 100%;
+}
+
+.filter-options select:hover {
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px var(--glass-hover-shadow);
+}
+
+.filter-options select:focus {
+    outline: none;
+    background: var(--glass-hover-bg);
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px var(--primary-glow), 0 8px 30px var(--glass-hover-shadow);
+}
+
+.filter-options select option {
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+/* 自定义下拉箭头 */
+.filter-options select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.8)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+.quick-filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.filter-tag {
+    padding: 10px 18px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px var(--glass-shadow);
+}
+
+.filter-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.6s;
+}
+
+.filter-tag:hover::before {
+    left: 100%;
+}
+
+.filter-tag:hover {
+    background: var(--glass-hover-bg);
+    border-color: var(--glass-hover-border);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--glass-hover-shadow);
+}
+
+.filter-tag.active {
+    background: linear-gradient(135deg, var(--primary-light), rgba(41, 128, 185, 0.9));
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px var(--primary-glow), 0 0 0 2px var(--primary-glow);
+    transform: translateY(-2px);
+}
+
+.filter-tag.active::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* 竞赛列表区域 Competition List Section */
+.competitions-list {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.competitions-list h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.competition-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* 竞赛卡片 Competition Card */
+.competition-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.competition-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.competition-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.competition-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.competition-status.upcoming {
+    background: #3498db;
+}
+
+.competition-status.ongoing {
+    background: #2ecc71;
+}
+
+.competition-status.past {
+    background: #95a5a6;
+}
+
+.competition-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.competition-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.competition-content h3.en {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.competition-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.info-item i {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+.competition-content p {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.competition-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.competition-tags span {
+    background: #f0f2f5;
+    color: #2c3e50;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.competition-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* 分页 Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pagination-btn.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination-btn:hover:not(.active) {
+    background: #f5f5f5;
+}
+
+/* 竞赛日历区域 Competition Calendar Section */
+.competition-calendar {
+    padding: 60px 0;
+    background: white;
+}
+
+.competition-calendar h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.competition-calendar > .container > p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7f8c8d;
+}
+
+.calendar-wrapper {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #3498db;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.calendar-header button:hover {
+    background: #e3f2fd;
+}
+
+.calendar-header h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.calendar-grid {
+    padding: 20px;
+}
+
+.calendar-day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calendar-day:hover {
+    background: #f0f2f5;
+}
+
+.calendar-day.today {
+    background: #e3f2fd;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.calendar-day.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3498db;
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+}
+
+.upcoming-events {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.upcoming-events h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.event-item {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+}
+
+.event-date {
+    width: 80px;
+    background: #3498db;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.event-date .day {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.event-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.event-details {
+    padding: 15px;
+    flex: 1;
+}
+
+.event-details h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.event-details p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.event-details .event-type {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #f0f2f5;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #2c3e50;
+}
+
+/* 竞赛资源区域 Competition Resources Section */
+.competition-resources {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.competition-resources h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.competition-resources > .container > p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7f8c8d;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-icon {
+    width: 70px;
+    height: 70px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.resource-icon i {
+    font-size: 2rem;
+    color: #3498db;
+}
+
+.resource-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.resource-card p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* 响应式设计 Responsive Design */
+@media (min-width: 768px) {
+    .competition-card {
+        flex-direction: row;
+    }
+    
+    .competition-image {
+        width: 300px;
+        height: auto;
+    }
+    
+    .competition-content {
+        flex: 1;
+    }
+    
+    .competition-actions {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .competitions-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .competitions-hero p {
+        font-size: 1rem;
+    }
+    
+    .search-filter {
+        padding: 15px;
+        margin: 20px 15px 0;
+    }
+    
+    .search-box input {
+        padding: 15px 15px 15px 50px;
+        font-size: 1rem;
+    }
+    
+    .search-icon {
+        left: 15px;
+        font-size: 1rem;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .filter-options select {
+        min-width: auto;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .quick-filters {
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .filter-tag {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        border-radius: 20px;
+    }
+    
+    /* 移动端玻璃质感优化 */
+    .search-filter::before,
+    .search-box.glass-effect::before,
+    .filter-options select::before,
+    .filter-tag::before {
+        display: none;
+    }
+    
+    .competition-image {
+        height: 180px;
+    }
+    
+    .competition-content {
+        padding: 20px;
+    }
+    
+    .competition-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .competition-actions {
+        flex-direction: column;
+    }
+    
+    .calendar-day {
+        height: 45px;
+    }
+    
+    .resource-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-filter {
+        padding: 15px;
+    }
+    
+    .search-box input {
+        padding: 12px 12px 12px 45px;
+        font-size: 0.9rem;
+    }
+    
+    .search-icon {
+        left: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .filter-options select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 玻璃质感增强效果 Enhanced Glass Effect */
+.search-filter::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-filter:hover::before {
+    opacity: 1;
+}
+
+/* 搜索框玻璃质感增强 */
+.search-box.glass-effect::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-box.glass-effect:hover::before {
+    opacity: 1;
+}
+
+/* 过滤器玻璃质感增强 */
+.filter-options select::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.filter-options select:hover::before {
+    opacity: 1;
+}
+
+/* 快速过滤标签玻璃质感增强 */
+.filter-tag::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border-radius: 26px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.filter-tag:hover::before {
+    opacity: 1;
+}
+
+/* 脉冲动画效果 Pulse Animation */
+@keyframes glassPulse {
+    0% {
+        box-shadow: 0 4px 20px var(--glass-shadow);
+    }
+    50% {
+        box-shadow: 0 8px 30px var(--glass-hover-shadow);
+    }
+    100% {
+        box-shadow: 0 4px 20px var(--glass-shadow);
+    }
+}
+
+.search-filter:hover {
+    animation: glassPulse 2s ease-in-out infinite;
+}
+
+/* 浮动效果 Floating Effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.filter-options select:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 光晕效果 Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 20px var(--glass-shadow);
+    }
+    50% {
+        box-shadow: 0 4px 20px var(--primary-glow);
+    }
+}
+
+.search-filter:hover {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* 波纹效果 Ripple Effect */
+.filter-tag {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.filter-tag:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* 渐变边框效果 Gradient Border */
+.search-filter,
+.search-box.glass-effect,
+.filter-options select,
+.filter-tag {
+    position: relative;
+}
+
+.search-filter::after,
+.search-box.glass-effect::after,
+.filter-options select::after,
+.filter-tag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-filter:hover::after,
+.search-box.glass-effect:hover::after,
+.filter-options select:hover::after,
+.filter-tag:hover::after {
+    opacity: 1;
+}
+
+/* 英文版本样式 English Version Styles */
+.en {
+    display: none;
+}
+
+/* 当语言切换为英文时显示英文内容 Show English content when language is switched to English */
+body.english .en {
+    display: block;
+}
+
+body.english :not(.en):not(input):not(select):not(button):not(i):not(a):not([class^="fas"]):not([class^="fab"]):not([class^="far"]) {
+    display: none;
+}
+
+body.english .competition-tags span,
+body.english .info-item span,
+body.english .competition-status,
+body.english .event-type,
+body.english .event-date .day,
+body.english .event-date .month {
+    display: inline-block;
+}
+
+body.english .search-box input,
+body.english .filter-options select {
+    display: block;
+}
+
+body.english .calendar-day,
+body.english .pagination-btn {
+    display: flex;
+}
+
+body.english .calendar-day-names div,
+body.english .calendar-days {
+    display: grid;
+}
+
+body.english .competition-info,
+body.english .competition-tags,
+body.english .competition-actions,
+body.english .info-item,
+body.english .pagination,
+body.english .calendar-header,
+body.english .event-item,
+body.english .event-date,
+body.english .social-icons,
+body.english .footer-content,
+body.english .footer-links,
+body.english .resources-grid {
+    display: flex;
+}
+
+body.english .competition-cards,
+body.english .calendar-day-names,
+body.english .calendar-days,
+body.english .resources-grid {
+    display: grid;
+}

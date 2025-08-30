@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teamify | International Student Teammate Match</title>
+    <meta name="description" content="帮助国际高中生寻找竞赛队友的平台，包括AMC、物理碗、USACO、科学奥林匹克等顶尖国际竞赛。">
+    <meta name="keywords" content="国际生队友匹配,International student teammate match,AMC竞赛,Physics Bowl,USACO编程,科学奥林匹克,国际竞赛找队友,Find teammates for international competitions,高中生组队平台,High school student collaboration platform">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">teamify</a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fas fa-times" id="hideMenu"></i>
+                    <ul>
+                        <li><a href="index.html" class="active">首页 Home</a></li>
+                        <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                        <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                        <li><a href="login.html">个人资料 Profile</a></li>
+                        <li><a href="about.html">团队介绍 About Us</a></li>
+                    </ul>
+                </div>
+                <div class="language-switch">
+                    <button id="langToggle">EN | 中文 | 粵語</button>
+                </div>
+                <div class="auth-buttons" id="authButtons">
+                    <!-- 动态加载认证按钮 -->
+                </div>
+                <i class="fas fa-bars" id="showMenu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+                            <div class="hero-content">
+                                 <h1><span class="highlight">全球竞赛</span>，寻找最佳<span class="highlight">队友</span></h1>
+                 <h1 class="en"><span class="highlight">Global Competitions</span>, Find Your Perfect <span class="highlight">Teammates</span></h1>
+                 <h1 class="yue"><span class="highlight">全球競賽</span>，搵最佳<span class="highlight">隊友</span></h1>
+                 <p>连接世界各地的高中生，组建最强竞赛团队</p>
+                 <p class="en">Connect with high school students worldwide to build the strongest competition teams</p>
+                 <p class="yue">連接世界各地嘅高中生，組建最強競賽團隊</p>
+                <div class="hero-buttons">
+                    <a href="find-teammates.html" class="btn btn-primary">寻找队友 Find Teammates</a>
+                    <a href="find-teammates.html" class="btn btn-primary yue">搵隊友</a>
+                    <a href="register.html" class="btn btn-secondary">立即注册 Register Now</a>
+                    <a href="register.html" class="btn btn-secondary yue">立即註冊</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">我们的优势 Our Features</h2>
+            <h2 class="section-title yue">我哋嘅優勢</h2>
+            <div class="feature-cards">
+                                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                                         <h3>全球人才库</h3>
+                         <h3 class="en">Global Talent Pool</h3>
+                         <h3 class="yue">全球人才庫</h3>
+                         <p>接触来自世界各地的优秀高中生，扩展你的国际人脉网络</p>
+                         <p class="en">Connect with outstanding high school students from around the world and expand your international network</p>
+                         <p class="yue">接觸來自世界各地嘅優秀高中生，擴展你嘅國際人脈網絡</p>
+                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                                         <h3>多样竞赛资源</h3>
+                     <h3 class="en">Diverse Competition Resources</h3>
+                     <h3 class="yue">多樣競賽資源</h3>
+                     <p>获取最新的国际竞赛信息，包括AMC、物理碗、USACO等顶尖竞赛</p>
+                     <p class="en">Access the latest information on international competitions, including AMC, Physics Bowl, USACO and other top competitions</p>
+                     <p class="yue">獲取最新嘅國際競賽資訊，包括AMC、物理碗、USACO等頂尖競賽</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>智能匹配系统</h3>
+                    <h3 class="en">Smart Matching System</h3>
+                    <h3 class="yue">智能匹配系統</h3>
+                    <p>基于技能、经验和兴趣的智能匹配算法，找到最合适的队友</p>
+                    <p class="en">Find the most suitable teammates with our intelligent matching algorithm based on skills, experience, and interests</p>
+                    <p class="yue">基於技能、經驗同興趣嘅智能匹配算法，搵到最啱嘅隊友</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="competitions-preview">
+        <div class="container">
+            <h2 class="section-title">热门竞赛 Popular Competitions</h2>
+            <h2 class="section-title yue">熱門競賽</h2>
+            <div class="competition-cards">
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/amc-math.svg" alt="AMC数学竞赛">
+                    </div>
+                    <div class="competition-info">
+                        <h3>AMC数学竞赛 (AMC 10/12)</h3>
+                        <h3 class="en">AMC Mathematical Competition</h3>
+                        <h3 class="yue">AMC數學競賽 (AMC 10/12)</h3>
+                        <p class="competition-desc">美国数学协会主办，全球最具影响力的高中数学竞赛</p>
+                        <p class="en competition-desc">Hosted by MAA, the most influential high school math competition globally</p>
+                        <p class="yue competition-desc">美國數學協會主辦，全球最具影響力嘅高中數學競賽</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-02-15</span></p>
+                        <p class="yue">截止日期: <span class="deadline">2024-02-15</span></p>
+                        <a href="competitions.html#amc" class="btn btn-small">了解更多 Learn More</a>
+                        <a href="competitions.html#amc" class="btn btn-small yue">了解更多</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/physics-bowl.svg" alt="物理碗竞赛">
+                    </div>
+                    <div class="competition-info">
+                        <h3>物理碗竞赛 Physics Bowl</h3>
+                        <h3 class="en">Physics Bowl Competition</h3>
+                        <p class="competition-desc">美国物理教师协会主办，测试物理知识和解题能力</p>
+                        <p class="en competition-desc">Hosted by AAPT, testing physics knowledge and problem-solving skills</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-03-20</span></p>
+                        <a href="competitions.html#physics-bowl" class="btn btn-small">了解更多 Learn More</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/usaco-coding.svg" alt="USACO编程竞赛">
+                    </div>
+                    <div class="competition-info">
+                        <h3>USACO编程竞赛</h3>
+                        <h3 class="en">USACO Programming Competition</h3>
+                        <p class="competition-desc">美国计算机奥林匹克竞赛，培养算法思维和编程技能</p>
+                        <p class="en competition-desc">US Computing Olympiad, developing algorithmic thinking and programming skills</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-04-10</span></p>
+                        <a href="competitions.html#usaco" class="btn btn-small">了解更多 Learn More</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/science-olympiad.svg" alt="科学奥林匹克">
+                    </div>
+                    <div class="competition-info">
+                        <h3>科学奥林匹克 Science Olympiad</h3>
+                        <h3 class="en">Science Olympiad Competition</h3>
+                        <p class="competition-desc">综合性科学竞赛，涵盖物理、化学、生物等多个学科</p>
+                        <p class="en competition-desc">Comprehensive science competition covering physics, chemistry, biology and more</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-05-15</span></p>
+                        <a href="competitions.html#science-olympiad" class="btn btn-small">了解更多 Learn More</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/international-debate.svg" alt="国际辩论赛">
+                    </div>
+                    <div class="competition-info">
+                        <h3>国际辩论赛 International Debate</h3>
+                        <h3 class="en">International Debate Tournament</h3>
+                        <p class="competition-desc">提升批判性思维和公共演讲能力的国际辩论赛事</p>
+                        <p class="en competition-desc">International debate competition that enhances critical thinking and public speaking skills</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-06-20</span></p>
+                        <a href="competitions.html#debate" class="btn btn-small">了解更多 Learn More</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-image">
+                        <img src="images/chemistry-olympiad.svg" alt="化学奥林匹克">
+                    </div>
+                    <div class="competition-info">
+                        <h3>化学奥林匹克 Chemistry Olympiad</h3>
+                        <h3 class="en">Chemistry Olympiad Competition</h3>
+                        <p class="competition-desc">国际化学奥林匹克竞赛，挑战化学理论和实验技能</p>
+                        <p class="en competition-desc">International Chemistry Olympiad challenging theory and experimental skills</p>
+                        <p>截止日期 Deadline: <span class="deadline">2024-07-10</span></p>
+                        <a href="competitions.html#chemistry" class="btn btn-small">了解更多 Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="competitions.html" class="btn btn-outline">查看全部竞赛 View All Competitions</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">用户反馈 Testimonials</h2>
+            <h2 class="section-title yue">用戶反饋</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                                                 <p>"通过这个平台，我找到了来自不同国家的高中队友，我们一起参加了AMC数学竞赛并取得了优异成绩。这是一次难忘的国际合作体验！"</p>
+                         <p class="en">"Through this platform, I found high school teammates from different countries, and together we participated in the AMC Math Competition and achieved excellent results. It was an unforgettable international collaboration experience!"</p>
+                         <p class="yue">"通過呢個平台，我搵到來自唔同國家嘅高中隊友，我哋一齊參加咗AMC數學競賽並取得優異成績。呢次係一次難忘嘅國際合作體驗！"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.svg" alt="用户头像">
+                        <div class="author-info">
+                                                     <h4>李明</h4>
+                         <p>中国 · 北京四中</p>
+                         <p class="en">China · Beijing No.4 High School</p>
+                         <p class="yue">中國 · 北京四中</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                                                 <p>"作为一名留学生，我一直很难找到合适的高中竞赛队友。这个平台帮我解决了这个问题，现在我有了一个国际化的团队网络！"</p>
+                         <p class="en">"As an international student, I always found it difficult to find suitable high school competition teammates. This platform solved this problem for me, and now I have an international team network!"</p>
+                         <p class="yue">"作為一名留學生，我一直好難搵到啱嘅高中競賽隊友。呢個平台幫我解決咗呢個問題，而家我有咗一個國際化嘅團隊網絡！"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.svg" alt="用户头像">
+                        <div class="author-info">
+                                                     <h4>Sarah Johnson</h4>
+                         <p>美国 · 波士顿高中</p>
+                         <p class="en">USA · Boston High School</p>
+                         <p class="yue">美國 · 波士頓高中</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                                                 <p>"平台上的竞赛信息非常全面，智能匹配功能帮我找到了志同道合的高中队友，我们现在已经合作参加了AMC、物理碗等多场国际比赛！"</p>
+                         <p class="en">"The competition information on the platform is very comprehensive, and the smart matching feature helped me find like-minded high school teammates. We have now collaborated on AMC, Physics Bowl and other international competitions!"</p>
+                         <p class="yue">"平台上嘅競賽資訊非常全面，智能匹配功能幫我搵到志同道合嘅高中隊友，我哋而家已經合作參加咗AMC、物理碗等多場國際比賽！"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.svg" alt="用户头像">
+                        <div class="author-info">
+                                                     <h4>Raj Patel</h4>
+                         <p>印度 · 德里高中</p>
+                         <p class="en">India · Delhi High School</p>
+                         <p class="yue">印度 · 德里高中</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>准备好开始你的国际竞赛之旅了吗？</h2>
+                <h2 class="en">Ready to start your international competition journey?</h2>
+                <h2 class="yue">準備好開始你嘅國際競賽之旅未？</h2>
+                <p>立即注册，找到最佳队友，赢得全球竞赛！</p>
+                <p class="en">Register now, find the best teammates, and win global competitions!</p>
+                <p class="yue">立即註冊，搵到最佳隊友，贏得全球競賽！</p>
+                <a href="register.html" class="btn btn-cta">立即加入 Join Now</a>
+                <a href="register.html" class="btn btn-cta yue">立即加入</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                                 <div class="footer-logo">
+                     <h3>teamify</h3>
+                     <p>连接全球高中生，共赢国际竞赛</p>
+                     <p class="en">Connecting Global High School Students, Winning International Competitions Together</p>
+                     <p class="yue">連接全球高中生，共贏國際競賽</p>
+                 </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>快速链接 Quick Links</h4>
+                        <h4 class="yue">快速連結</h4>
+                        <ul>
+                            <li><a href="index.html">首页 Home</a></li>
+                            <li><a href="index.html" class="yue">首頁</a></li>
+                            <li><a href="competitions.html">竞赛信息 Competitions</a></li>
+                            <li><a href="competitions.html" class="yue">競賽資訊</a></li>
+                            <li><a href="find-teammates.html">寻找队友 Find Teammates</a></li>
+                            <li><a href="find-teammates.html" class="yue">搵隊友</a></li>
+                            <li><a href="login.html">个人资料 Profile</a></li>
+                            <li><a href="login.html" class="yue">個人資料</a></li>
+                         <li><a href="about.html">团队介绍 About Us</a></li>
+                         <li><a href="about.html" class="yue">團隊介紹</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>热门竞赛 Popular Competitions</h4>
+                        <h4 class="yue">熱門競賽</h4>
+                        <ul>
+                                                         <li><a href="competitions.html#amc">AMC数学竞赛 AMC Math</a></li>
+                             <li><a href="competitions.html#amc" class="yue">AMC數學競賽</a></li>
+                             <li><a href="competitions.html#physics-bowl">物理碗竞赛 Physics Bowl</a></li>
+                             <li><a href="competitions.html#physics-bowl" class="yue">物理碗競賽</a></li>
+                             <li><a href="competitions.html#usaco">USACO编程竞赛 USACO</a></li>
+                             <li><a href="competitions.html#usaco" class="yue">USACO編程競賽</a></li>
+                            <li><a href="competitions.html#debate">国际辩论赛 Debate Tournament</a></li>
+                            <li><a href="competitions.html#debate" class="yue">國際辯論賽</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>关于我们 About Us</h4>
+                        <h4 class="yue">關於我哋</h4>
+                        <ul>
+                            <li><a href="about.html">团队介绍 Our Team</a></li>
+                            <li><a href="about.html" class="yue">團隊介紹</a></li>
+                            <li><a href="contact.html">联系我们 Contact Us</a></li>
+                            <li><a href="contact.html" class="yue">聯繫我哋</a></li>
+                            <li><a href="privacy-policy.html">隐私政策 Privacy Policy</a></li>
+                            <li><a href="privacy-policy.html" class="yue">隱私政策</a></li>
+                            <li><a href="terms-of-service.html">使用条款 Terms of Service</a></li>
+                            <li><a href="terms-of-service.html" class="yue">使用條款</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>关注我们 Follow Us</h4>
+                    <h4 class="yue">關注我哋</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+                                                   <div class="footer-bottom">
+                                     <p>&copy; 2023 teamify. All Rights Reserved. | 国际高中生队友匹配平台 - 版权所有</p>
+                   <p class="yue">&copy; 2023 teamify. 版權所有 | 國際高中生隊友匹配平台 - 版權所有</p>
+              </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
